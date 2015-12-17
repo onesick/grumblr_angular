@@ -1,1 +1,5 @@
 <h2>This is a Grumble</h2>
+
+<div data-ng-repeat="grumble in GrumbleShowViewModel.grumbles | orderBy:'-created_at'">
+  <p><a data-ui-sref="grumbleShow({id: grumble.id})">{{grumble.title}}</a></p>
+</div>
